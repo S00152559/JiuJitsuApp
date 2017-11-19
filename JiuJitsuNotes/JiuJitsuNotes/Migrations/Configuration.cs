@@ -1,9 +1,12 @@
 namespace JiuJitsuNotes.Migrations
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using JiuJitsuNotes.Models;
+    using jiujitsuNotes.Models.NotesModel;
 
     internal sealed class Configuration : DbMigrationsConfiguration<JiuJitsuNotes.Models.ApplicationDbContext>
     {
@@ -19,13 +22,20 @@ namespace JiuJitsuNotes.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.Positions.AddOrUpdate(
+              p => p.PositionName,
+              new Positions { PositionID = 1, PositionName = "Standing" },
+              new Positions { PositionID = 2, PositionName = "Full Gaurd" },
+              new Positions
+              {
+                  PositionID = 3,
+                  PositionName = "Mount",
+                  Techniques = new List<Techniques>()
+              { new Techniques { DateAdded=DateTime.Now, CommonMistakes="TestMistake", EndPositionID=2, StartPositionID=3, KeyPoints="TestPoint", StartingCondition="Start cond", Steps="Test Steps", TechniqueType = TechniqueType.Escape }
+              }
+
+              });
+
         }
     }
 }

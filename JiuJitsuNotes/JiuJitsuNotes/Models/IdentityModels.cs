@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using jiujitsuNotes.Models.NotesModel;
 
 namespace JiuJitsuNotes.Models
 {
@@ -20,6 +21,8 @@ namespace JiuJitsuNotes.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Techniques> Techniques { get; set; }
+        public DbSet<Positions> Positions { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
