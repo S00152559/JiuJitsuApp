@@ -1,0 +1,81 @@
+﻿@model IEnumerable<jiujitsuNotes.Models.NotesModel.Techniques>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EndPosition.PositionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartPosition.PositionName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TechniqueName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TechniqueType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateAdded)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartingCondition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Steps)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KeyPoints)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommonMistakes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndPosition.PositionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartPosition.PositionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TechniqueName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TechniqueType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAdded)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartingCondition)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Steps)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KeyPoints)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommonMistakes)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TechniqueID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TechniqueID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TechniqueID })
+        </td>
+    </tr>
+}
+
+</table>

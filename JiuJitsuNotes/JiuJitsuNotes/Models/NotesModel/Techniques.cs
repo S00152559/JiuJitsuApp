@@ -15,6 +15,7 @@ namespace jiujitsuNotes.Models.NotesModel
     {
         [Key]
         public int TechniqueID { get; set; }
+        public string TechniqueName { get; set; }
         [ForeignKey("StartPosition")]
         public int StartPositionID { get; set; }
         public virtual Positions StartPosition { get; set; }

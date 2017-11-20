@@ -31,7 +31,7 @@ namespace JiuJitsuNotes.Migrations
                   PositionID = 3,
                   PositionName = "Mount",
                   Techniques = new List<Techniques>()
-              { new Techniques { DateAdded=DateTime.Now, CommonMistakes="TestMistake", EndPositionID=2, StartPositionID=3, KeyPoints="TestPoint", StartingCondition="Start cond", Steps="Test Steps", TechniqueType = TechniqueType.Escape }
+              { new Techniques { TechniqueName="Test", DateAdded=DateTime.Now, CommonMistakes="TestMistake", EndPositionID=2, StartPositionID=3, KeyPoints="TestPoint", StartingCondition="Start cond", Steps="Test Steps", TechniqueType = TechniqueType.Escape }
               }
 
               });

@@ -1,0 +1,90 @@
+﻿@model jiujitsuNotes.Models.NotesModel.Techniques
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Techniques</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EndPosition.PositionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndPosition.PositionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartPosition.PositionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartPosition.PositionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TechniqueName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TechniqueName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TechniqueType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TechniqueType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateAdded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAdded)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartingCondition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartingCondition)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Steps)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Steps)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KeyPoints)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KeyPoints)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommonMistakes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommonMistakes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TechniqueID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

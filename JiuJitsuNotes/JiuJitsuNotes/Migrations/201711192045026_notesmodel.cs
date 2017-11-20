@@ -21,6 +21,7 @@ namespace JiuJitsuNotes.Migrations
                 c => new
                     {
                         TechniqueID = c.Int(nullable: false, identity: true),
+                        TechniqueName = c.String(),
                         StartPositionID = c.Int(nullable: false),
                         EndPositionID = c.Int(nullable: false),
                         TechniqueType = c.Int(nullable: false),
