@@ -1,0 +1,47 @@
+﻿@model jiujitsuNotes.Models.NotesModel.Positions
+
+@{
+    ViewBag.Title = "PositionTechiques";
+}
+
+<h2>@Model.PositionName</h2>
+@if ((Model.Techniques.Where(t => t.TechniqueType == jiujitsuNotes.Models.NotesModel.TechniqueType.Sweep)) != null)
+{<h3>Sweep</h3>}
+@foreach (var item in Model.Techniques.Where(t => t.TechniqueType == jiujitsuNotes.Models.NotesModel.TechniqueType.Sweep))
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TechniqueName)
+        </td>
+    </tr>
+}
+@if ((Model.Techniques.Where(t => t.TechniqueType == jiujitsuNotes.Models.NotesModel.TechniqueType.Escape)) != null)
+{<h3>Escape</h3>}
+@foreach (var item in Model.Techniques.Where(t => t.TechniqueType == jiujitsuNotes.Models.NotesModel.TechniqueType.Escape))
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TechniqueName)
+        </td>
+    </tr>
+}
+@if ((Model.Techniques.Where(t => t.TechniqueType == jiujitsuNotes.Models.NotesModel.TechniqueType.Transition)) != null)
+{<h3>Transition</h3>}
+@foreach (var item in Model.Techniques.Where(t => t.TechniqueType == jiujitsuNotes.Models.NotesModel.TechniqueType.Transition))
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TechniqueName)
+        </td>
+    </tr>
+}
+@if ((Model.Techniques.Where(t => t.TechniqueType == jiujitsuNotes.Models.NotesModel.TechniqueType.Submission)) != null)
+{<h3>Submission</h3>}
+@foreach (var item in Model.Techniques.Where(t => t.TechniqueType == jiujitsuNotes.Models.NotesModel.TechniqueType.Submission))
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TechniqueName)
+        </td>
+    </tr>
+}

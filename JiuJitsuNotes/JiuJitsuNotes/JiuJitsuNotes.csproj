@@ -253,6 +253,7 @@
     <Content Include="Views\Techniques\Edit.cshtml" />
     <Content Include="Views\Techniques\Index.cshtml" />
     <Content Include="Views\Positions\Index.cshtml" />
+    <Content Include="Views\Positions\PositionTechniques.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

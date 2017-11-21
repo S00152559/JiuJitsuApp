@@ -20,6 +20,18 @@ namespace JiuJitsuNotes.Controllers
         {
             return View(db.Positions.ToList());
         }
-
+        public ActionResult PositionTechniques(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Positions positions = db.Positions.Find(id);
+            if (positions == null)
+            {
+                return HttpNotFound();
+            }
+            return View(positions);
+        }
     }
 }
