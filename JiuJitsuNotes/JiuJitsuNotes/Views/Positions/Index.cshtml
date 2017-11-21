@@ -1,0 +1,20 @@
+﻿@model IEnumerable<jiujitsuNotes.Models.NotesModel.Positions>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(item.PositionName, "PositionTechniques", new { id=item.PositionID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -54,8 +54,9 @@ namespace JiuJitsuNotes.Controllers
         {
             if (ModelState.IsValid)
             {
-
-                db.Techniques.Add(techniques);
+                //This finds the posiiton based on starting positon then adds the technique to the collection of positions
+                Positions pos = db.Positions.Find(techniques.StartPositionID);
+                pos.Techniques.Add(techniques);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -91,6 +92,7 @@ namespace JiuJitsuNotes.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 db.Entry(techniques).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
